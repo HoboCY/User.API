@@ -12,14 +12,15 @@ namespace User.API.Dtos
         /// </summary>
         public int UserId { get; set; }
 
-        /// <summary>
-        /// 名称
-        /// </summary>
+        //以下信息包含在 token-claims 里
         public string Name { get; set; }
 
-        /// <summary>
-        /// 头像
-        /// </summary>
+        public string Phone { get; set; }
+
+        public string Company { get; set; }
+
+        public string Title { get; set; }
+
         public string Avatar { get; set; }
     }
 }

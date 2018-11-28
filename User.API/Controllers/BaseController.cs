@@ -10,7 +10,21 @@ namespace User.API.Controllers
 {
     public class BaseController : Controller
     {
-        protected UserIdentity UserIdentity => new UserIdentity { UserId = 1, Name = "hobo" };//对象初始化
+        protected UserIdentity UserIdentity
+        {
+            get
+            {
+                var identity = new UserIdentity();
+
+                identity.UserId = int.Parse(User.Claims.First(x => x.Type == "sub").Value);
+                identity.Avatar = User.Claims.First(x => x.Type == "avatar").Value;
+                identity.Company = User.Claims.First(x => x.Type == "company").Value;
+                identity.Name = User.Claims.First(x => x.Type == "name").Value;
+                identity.Phone = User.Claims.First(x => x.Type == "phone").Value;
+                identity.Title = User.Claims.First(x => x.Type == "title").Value;
+                return identity;
+            }
+        }
 
     }
 }

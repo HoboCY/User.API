@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using User.API.Data;
-using User.API.Dtos;
+using User.API.Options;
 using User.API.Filters;
 using User.API.Models;
 
@@ -33,10 +33,10 @@ namespace User.API
         {
             services.AddDbContext<UserContext>(options =>
             {
-                options.UseMySQL(Configuration.GetConnectionString("MysqlUser"));
+                options.UseMySQL(Configuration.GetConnectionString("MysqlDB"));
             });
 
-            services.Configure<Dtos.ServiceDiscoveryOptions>(Configuration.GetSection("ServiceDiscovery"));
+            services.Configure<Options.ServiceDiscoveryOptions>(Configuration.GetSection("ServiceDiscovery"));
             //注册单例
             services.AddSingleton<IConsulClient>(p => new ConsulClient(cfg =>
             {

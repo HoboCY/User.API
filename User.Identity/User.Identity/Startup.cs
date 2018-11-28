@@ -50,14 +50,14 @@ namespace User.Identity
             });
 
             // 注册全局单例 ResilienceClientFactory
-            services.AddSingleton(typeof(ResilienceClientFactory), sp =>
-             {
-                 var logger = sp.GetRequiredService<ILogger<ResilienceHttpClient>>();
-                 var httpContextAccessor = sp.GetRequiredService<IHttpContextAccessor>();
-                 var retryCount = 5;
-                 var exceptionCountAllowedBeforeBreaking = 5;
-                 return new ResilienceClientFactory(logger, httpContextAccessor, retryCount, exceptionCountAllowedBeforeBreaking);
-             });
+            services.AddSingleton(sp =>
+            {
+                var logger = sp.GetRequiredService<ILogger<ResilienceHttpClient>>();
+                var httpContextAccessor = sp.GetRequiredService<IHttpContextAccessor>();
+                var retryCount = 5;
+                var exceptionCountAllowedBeforeBreaking = 5;
+                return new ResilienceClientFactory(logger, httpContextAccessor, retryCount, exceptionCountAllowedBeforeBreaking);
+            });
 
             // 注册全局单例IHttpClient
             services.AddSingleton<IHttpClient>(sp =>

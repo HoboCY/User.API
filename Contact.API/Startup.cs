@@ -42,12 +42,12 @@ namespace Contact.API
                 a.MongoConnectionString = Configuration["MongoConnectionString"].ToString();
                 a.MongoContactDatabase = Configuration["MongoContactDatabase"].ToString();
             });
-            //services.Configure<ServiceDiscoveryOptions>(Configuration.GetSection("ServiceDiscovery"));
-            //services.AddSingleton<IDnsQuery>(d =>
-            //{
-            //    var serviceConfiguration = d.GetRequiredService<IOptions<ServiceDiscoveryOptions>>().Value;
-            //    return new LookupClient(IPAddress.Parse(serviceConfiguration.Consul.DnsEndpoint.Address), serviceConfiguration.Consul.DnsEndpoint.Port);
-            //});
+            services.Configure<ServiceDiscoveryOptions>(Configuration.GetSection("ServiceDiscovery"));
+            services.AddSingleton<IDnsQuery>(d =>
+            {
+                var serviceConfiguration = d.GetRequiredService<IOptions<ServiceDiscoveryOptions>>().Value;
+                return new LookupClient(IPAddress.Parse(serviceConfiguration.Consul.DnsEndpoint.Address), serviceConfiguration.Consul.DnsEndpoint.Port);
+            });
             services.Configure<ServiceDiscoveryOptions>(Configuration.GetSection("ServiceDiscovery"));
             services.AddSingleton<IConsulClient>(s => new ConsulClient(cfg =>
             {
@@ -104,15 +104,15 @@ namespace Contact.API
                 app.UseDeveloperExceptionPage();
             }
 
-            //lifetime.ApplicationStarted.Register(() =>
-            //{
-            //    RegisterService(app, options, consulClient);
-            //});
+            lifetime.ApplicationStarted.Register(() =>
+            {
+                RegisterService(app, options, consulClient);
+            });
 
-            //lifetime.ApplicationStopped.Register(() =>
-            //{
-            //    DeRegisterService(app, options, consulClient);
-            //});
+            lifetime.ApplicationStopped.Register(() =>
+            {
+                DeRegisterService(app, options, consulClient);
+            });
 
             app.UseAuthentication();
             app.UseMvc();

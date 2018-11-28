@@ -9,6 +9,7 @@ using User.API.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.JsonPatch;
 using User.API.Models;
+using User.API.Dtos;
 
 namespace User.API.Controllers
 {
@@ -144,6 +145,26 @@ namespace User.API.Controllers
             }));
             await _userContext.SaveChangesAsync();
             return Ok();
+        }
+
+        [HttpGet]
+        [Route("baseUserInfo/{userId}")]
+        public async Task<IActionResult> BaseUserInfo(int userId)
+        {
+            var appUser = await _userContext.Users.SingleOrDefaultAsync(u => u.Id == userId);
+            if (appUser == null) return NotFound();
+            var baseUserInfo = new BaseUserInfo
+            {
+                Avatar = appUser.Avatar,
+                Company = appUser.Company,
+                Name = appUser.Name,
+                Phone = appUser.Phone,
+                Title = appUser.Title,
+                UserId = appUser.Id
+            };
+            baseUserInfo.Tags = await _userContext.UserTags.Where(t => t.UserId == appUser.Id).Select(x => x.Tag)
+                .ToArrayAsync() ?? new string[] { };
+            return Ok(baseUserInfo);
         }
     }
 }

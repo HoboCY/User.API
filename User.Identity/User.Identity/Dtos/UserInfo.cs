@@ -13,6 +13,8 @@ namespace User.Identity.Dtos
 
         public string Company { get; set; }
 
+        public string Phone { get; set; }
+
         public string Title { get; set; }
 
         public string Avatar { get; set; }

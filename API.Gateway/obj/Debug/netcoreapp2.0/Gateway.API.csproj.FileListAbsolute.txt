@@ -1,0 +1,10 @@
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\bin\Debug\netcoreapp2.0\Gateway.API.deps.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\bin\Debug\netcoreapp2.0\Gateway.API.runtimeconfig.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\bin\Debug\netcoreapp2.0\Gateway.API.runtimeconfig.dev.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\bin\Debug\netcoreapp2.0\Gateway.API.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\bin\Debug\netcoreapp2.0\Gateway.API.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netcoreapp2.0\Gateway.API.csproj.CoreCompileInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netcoreapp2.0\Gateway.API.AssemblyInfoInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netcoreapp2.0\Gateway.API.AssemblyInfo.cs
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netcoreapp2.0\Gateway.API.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netcoreapp2.0\Gateway.API.pdb

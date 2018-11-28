@@ -1,0 +1,17 @@
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\User.API.UnitTests.deps.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\User.API.UnitTests.runtimeconfig.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\User.API.UnitTests.runtimeconfig.dev.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\User.API.UnitTests.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\User.API.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\User.API.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\obj\Debug\netcoreapp2.1\User.API.UnitTests.csprojAssemblyReference.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\obj\Debug\netcoreapp2.1\User.API.UnitTests.csproj.CoreCompileInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\obj\Debug\netcoreapp2.1\User.API.UnitTests.AssemblyInfoInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\obj\Debug\netcoreapp2.1\User.API.UnitTests.AssemblyInfo.cs
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\obj\Debug\netcoreapp2.1\User.API.UnitTests.csproj.CopyComplete
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\bin\Debug\netcoreapp2.1\User.API.UnitTests.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\obj\Debug\netcoreapp2.1\User.API.UnitTests.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\User.API.UnitTests\obj\Debug\netcoreapp2.1\User.API.UnitTests.pdb

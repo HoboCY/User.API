@@ -1,0 +1,32 @@
+stages:
+  - build
+  - test
+  - package
+  - deploy
+
+job1:
+  stage: build
+  script:
+    - dotnet build
+
+jog2:
+  stage: test
+  script: 
+    - cd User.API.UnitTests
+    - dotnet test
+
+job3:
+  stage:package
+  script:
+    - cd User.API
+    - docker build -t userapi:test .
+    - docker login -u testuser -p testpassword https://hub.jessetalk.cn/
+    - docker tag userapi:test hub.jessetalk.cn/userapi:test
+    - docker push hub.jessetalk.cn/userapi:test
+
+job4:
+  stage: deploy
+  script:
+    - docker run -d -p 81:80 --link mysql01:db --name userapi hub.jessetalk.cn/userapi:test
+    
+    

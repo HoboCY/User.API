@@ -1,0 +1,9 @@
+D:\HoboCY.Repository\Core.Study\project\beta\Resilience\bin\Debug\netcoreapp2.1\Resilience.deps.json
+D:\HoboCY.Repository\Core.Study\project\beta\Resilience\bin\Debug\netcoreapp2.1\Resilience.dll
+D:\HoboCY.Repository\Core.Study\project\beta\Resilience\obj\Debug\netcoreapp2.1\Resilience.csprojAssemblyReference.cache
+D:\HoboCY.Repository\Core.Study\project\beta\Resilience\obj\Debug\netcoreapp2.1\Resilience.csproj.CoreCompileInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\Resilience\obj\Debug\netcoreapp2.1\Resilience.AssemblyInfoInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\Resilience\obj\Debug\netcoreapp2.1\Resilience.AssemblyInfo.cs
+D:\HoboCY.Repository\Core.Study\project\beta\Resilience\bin\Debug\netcoreapp2.1\Resilience.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\Resilience\obj\Debug\netcoreapp2.1\Resilience.dll
+D:\HoboCY.Repository\Core.Study\project\beta\Resilience\obj\Debug\netcoreapp2.1\Resilience.pdb

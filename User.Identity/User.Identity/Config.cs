@@ -16,7 +16,10 @@ namespace User.Identity
             return new List<ApiResource>()
             {
                 new ApiResource("gateway_api","user service"),
-                new ApiResource("contact_api","contact service")
+                new ApiResource("user_api","user service"),
+                new ApiResource("contact_api","contact service"),
+                new ApiResource("project_api","project service"),
+                new ApiResource("recommend_api","recommend service")
             };
         }
 
@@ -37,13 +40,16 @@ namespace User.Identity
                     {
                      new Secret("secret".Sha256())
                  },
-                 AllowedScopes=new List<string>
+                 AllowedScopes=new List<string> //这个Client允许访问的Resource
                  {
                    "gateway_api",
-                 "contact_api",
-                 IdentityServerConstants.StandardScopes.OpenId,
-                 IdentityServerConstants.StandardScopes.Profile,
-                 IdentityServerConstants.StandardScopes.OfflineAccess}//这个Client允许访问的Resource
+                   "user_api",
+                   "contact_api",
+                   "project_api",
+                   "recommend_api",
+                   IdentityServerConstants.StandardScopes.OpenId,
+                   IdentityServerConstants.StandardScopes.Profile,
+                   IdentityServerConstants.StandardScopes.OfflineAccess}
                 }
             };
         }

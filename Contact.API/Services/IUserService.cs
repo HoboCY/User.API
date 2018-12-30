@@ -13,6 +13,6 @@ namespace Contact.API.Services
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        Task<BaseUserInfo> GetBaseUserInfoAsync(int userId);
+        Task<UserIdentity> GetBaseUserInfoAsync(int userId);
     }
 }

@@ -1,0 +1,9 @@
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Domain\bin\Debug\netcoreapp2.1\Project.Domain.deps.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Domain\bin\Debug\netcoreapp2.1\Project.Domain.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Domain\obj\Debug\netcoreapp2.1\Project.Domain.csproj.CoreCompileInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Domain\obj\Debug\netcoreapp2.1\Project.Domain.AssemblyInfoInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Domain\obj\Debug\netcoreapp2.1\Project.Domain.AssemblyInfo.cs
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Domain\bin\Debug\netcoreapp2.1\Project.Domain.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Domain\obj\Debug\netcoreapp2.1\Project.Domain.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Domain\obj\Debug\netcoreapp2.1\Project.Domain.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Domain\obj\Debug\netcoreapp2.1\Project.Domain.csprojAssemblyReference.cache

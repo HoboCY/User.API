@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Contact.API.Dtos
+namespace User.API.IntegrationEvents.Events
 {
-    public class BaseUserInfo
+    public class UserProfileChangedEvent
     {
         public int UserId { get; set; }
 

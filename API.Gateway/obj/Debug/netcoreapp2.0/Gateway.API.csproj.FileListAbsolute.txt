@@ -8,3 +8,4 @@ D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netc
 D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netcoreapp2.0\Gateway.API.AssemblyInfo.cs
 D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netcoreapp2.0\Gateway.API.dll
 D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netcoreapp2.0\Gateway.API.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\API.Gateway\obj\Debug\netcoreapp2.0\Gateway.API.csprojAssemblyReference.cache

@@ -1,0 +1,14 @@
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\bin\Debug\netcoreapp2.0\Recommend.API.deps.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\bin\Debug\netcoreapp2.0\Recommend.API.runtimeconfig.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\bin\Debug\netcoreapp2.0\Recommend.API.runtimeconfig.dev.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\bin\Debug\netcoreapp2.0\Recommend.API.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\obj\Debug\netcoreapp2.0\Recommend.API.csprojAssemblyReference.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\obj\Debug\netcoreapp2.0\Recommend.API.csproj.CoreCompileInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\obj\Debug\netcoreapp2.0\Recommend.API.AssemblyInfoInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\obj\Debug\netcoreapp2.0\Recommend.API.AssemblyInfo.cs
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\bin\Debug\netcoreapp2.0\Recommend.API.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\obj\Debug\netcoreapp2.0\Recommend.API.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\obj\Debug\netcoreapp2.0\Recommend.API.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\bin\Debug\netcoreapp2.0\Resilience.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\bin\Debug\netcoreapp2.0\Resilience.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Recommend.API\obj\Debug\netcoreapp2.0\Recommend.API.csproj.CopyComplete

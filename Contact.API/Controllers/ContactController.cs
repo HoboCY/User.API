@@ -40,6 +40,18 @@ namespace Contact.API.Controllers
         }
 
         /// <summary>
+        /// 获取通讯录列表
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("{userId}")]
+        public async Task<IActionResult> Get(int userId, CancellationToken cancellationToken)
+        {
+            return Ok(await _contactRepository.GetContactAsync(userId, cancellationToken));
+        }
+
+        /// <summary>
         /// 更新好友标签
         /// </summary>
         /// <param name="viewModel"></param>
@@ -76,7 +88,7 @@ namespace Contact.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Route("apply-requests")]
+        [Route("apply-requests/{userId}")]
         public async Task<IActionResult> AddApplyRequest(int userId, CancellationToken cancellationToken)
         {
             var result = await _contactApplyRequestRepository.AddRequestAsync(new ContactApplyRequest
@@ -104,10 +116,11 @@ namespace Contact.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPut]
-        [Route("apply-requests")]
+        [Route("apply-requests/{applierId}")]
         public async Task<IActionResult> ApprovalApplyRequest(int applierId, CancellationToken cancellationToken)
         {
             var result = await _contactApplyRequestRepository.ApprovalAsync(UserIdentity.UserId, applierId, cancellationToken);
+
             if (!result)
             {
                 //log tbd
@@ -118,6 +131,7 @@ namespace Contact.API.Controllers
             var userInfo = await _userService.GetBaseUserInfoAsync(UserIdentity.UserId);
 
             await _contactRepository.AddContactAsync(UserIdentity.UserId, applier, cancellationToken);
+
             await _contactRepository.AddContactAsync(applierId, userInfo, cancellationToken);
             return Ok();
         }

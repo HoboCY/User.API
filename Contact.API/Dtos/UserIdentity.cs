@@ -15,8 +15,6 @@ namespace Contact.API.Dtos
         //以下信息包含在 token-claims 里
         public string Name { get; set; }
 
-        public string Phone { get; set; }
-
         public string Company { get; set; }
 
         public string Title { get; set; }

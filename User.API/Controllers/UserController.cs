@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.JsonPatch;
 using User.API.Models;
 using User.API.Dtos;
+using DotNetCore.CAP;
+using User.API.IntegrationEvents.Events;
 
 namespace User.API.Controllers
 {
@@ -19,11 +21,32 @@ namespace User.API.Controllers
     {
         private UserContext _userContext;
         private ILogger<UserController> _logger;
+        private ICapPublisher _capPublisher;
 
-        public UserController(UserContext userContext, ILogger<UserController> logger)
+        public UserController(UserContext userContext, ILogger<UserController> logger, ICapPublisher capPublisher)
         {
             _userContext = userContext;
             _logger = logger;
+            _capPublisher = capPublisher;
+        }
+
+        private void RaiseUserprofileChangedEvent(Models.AppUser appUser)
+        {
+            if (_userContext.Entry(appUser).Property(nameof(appUser.Name)).IsModified ||
+                _userContext.Entry(appUser).Property(nameof(appUser.Title)).IsModified ||
+                _userContext.Entry(appUser).Property(nameof(appUser.Company)).IsModified ||
+                _userContext.Entry(appUser).Property(nameof(appUser.Avatar)).IsModified)
+            {
+                //发布
+                _capPublisher.Publish("finbook.userapi.user_profile_changed", new UserProfileChangedEvent
+                {
+                    UserId = appUser.Id,
+                    Name = appUser.Name,
+                    Title = appUser.Title,
+                    Company = appUser.Company,
+                    Avatar = appUser.Avatar
+                });
+            }
         }
 
         [Route("")]
@@ -75,8 +98,18 @@ namespace User.API.Controllers
                 _userContext.Add(property);
             }
 
-            _userContext.Users.Update(user);
-            _userContext.SaveChanges();
+            //事务
+            using (var transaction = _userContext.Database.BeginTransaction())
+            {
+                //发布用户变更的消息
+                RaiseUserprofileChangedEvent(user);
+
+                _userContext.Users.Update(user);
+                _userContext.SaveChanges();
+
+                transaction.Commit();
+            }
+
             return Json(user);
         }
 
@@ -151,19 +184,17 @@ namespace User.API.Controllers
         [Route("baseUserInfo/{userId}")]
         public async Task<IActionResult> BaseUserInfo(int userId)
         {
+            ///TBD 检查用户是否好友关系
             var appUser = await _userContext.Users.SingleOrDefaultAsync(u => u.Id == userId);
             if (appUser == null) return NotFound();
-            var baseUserInfo = new BaseUserInfo
+            var baseUserInfo = new UserIdentity
             {
                 Avatar = appUser.Avatar,
                 Company = appUser.Company,
                 Name = appUser.Name,
-                Phone = appUser.Phone,
                 Title = appUser.Title,
                 UserId = appUser.Id
             };
-            baseUserInfo.Tags = await _userContext.UserTags.Where(t => t.UserId == appUser.Id).Select(x => x.Tag)
-                .ToArrayAsync() ?? new string[] { };
             return Ok(baseUserInfo);
         }
     }

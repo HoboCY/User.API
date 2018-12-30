@@ -32,7 +32,7 @@ namespace User.API.Data
                     var logger = (ILogger<UserContextSeed>)scope.ServiceProvider.GetService(typeof(ILogger<UserContextSeed>));
                     logger.LogDebug("Begin UserContextSeed SeedAsync");
 
-                    //context.Database.Migrate();
+                    context.Database.Migrate();
 
                     if (!context.Users.Any())
                     {

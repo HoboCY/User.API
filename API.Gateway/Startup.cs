@@ -28,7 +28,6 @@ namespace Gateway.API
                     options.ApiSecret = "secret";
                     options.RequireHttpsMetadata = false;
                 });
-
             services.AddOcelot();
         }
 

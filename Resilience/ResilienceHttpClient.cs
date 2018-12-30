@@ -84,7 +84,11 @@ namespace Resilience
             return await DoPostPutAsync(HttpMethod.Post, url, func, authorizationToken, requestId, authorizationMethod);
         }
 
-
+        public Task<HttpResponseMessage> PutAsync<T>(string url, T item, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+        {
+            HttpRequestMessage Func() => CreateHttpRequestMessage(HttpMethod.Post, url, item);
+            return DoPostPutAsync(HttpMethod.Put, url, Func, authorizationToken, requestId, authorizationMethod);
+        }
         private Task<HttpResponseMessage> DoPostPutAsync(HttpMethod method, string url, Func<HttpRequestMessage> requestMessageAction, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
         {
             if (method != HttpMethod.Post && method != HttpMethod.Put)

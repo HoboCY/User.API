@@ -17,6 +17,10 @@ using User.Identity.Infrastructure;
 using User.Identity.Services;
 using IdentityServer4.Services;
 using User.Identity.Authentication;
+using zipkin4net;
+using zipkin4net.Middleware;
+using zipkin4net.Transport.Http;
+using zipkin4net.Tracers.Zipkin;
 
 namespace User.Identity
 {
@@ -67,20 +71,42 @@ namespace User.Identity
 
             services.AddScoped<IAuthCodeService, TestAuthCodeService>()
                 .AddScoped<IUserService, UserService>();
+            
 
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory,IApplicationLifetime lifetime)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            RegisterZipkinTrace(app, loggerFactory, lifetime);
             app.UseIdentityServer();
             app.UseMvc();
+        }
+
+        public void RegisterZipkinTrace(IApplicationBuilder app, ILoggerFactory loggerFactory,
+            IApplicationLifetime lifetime)
+        {
+            lifetime.ApplicationStarted.Register(() =>
+            {
+                TraceManager.SamplingRate = 1.0f;   //全部记录
+                var logger = new TracingLogger(loggerFactory, "zipkin4net");
+                var httpSender = new HttpZipkinSender("http://47.100.36.224:9411", "application/json");
+                var tracer = new ZipkinTracer(httpSender, new JSONSpanSerializer(), new Statistics());
+
+                var consoleTracer = new zipkin4net.Tracers.ConsoleTracer();
+
+                TraceManager.RegisterTracer(tracer);
+                TraceManager.RegisterTracer(consoleTracer);
+                TraceManager.Start(logger);
+            });
+
+            lifetime.ApplicationStopped.Register(() => TraceManager.Stop());
+            app.UseTracing("identity_api");
         }
     }
 }

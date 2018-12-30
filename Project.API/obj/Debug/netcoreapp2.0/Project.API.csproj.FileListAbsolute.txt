@@ -1,0 +1,16 @@
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\bin\Debug\netcoreapp2.0\Project.API.deps.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\bin\Debug\netcoreapp2.0\Project.API.runtimeconfig.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\bin\Debug\netcoreapp2.0\Project.API.runtimeconfig.dev.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\bin\Debug\netcoreapp2.0\Project.API.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\obj\Debug\netcoreapp2.0\Project.API.csproj.CoreCompileInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\obj\Debug\netcoreapp2.0\Project.API.AssemblyInfoInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\obj\Debug\netcoreapp2.0\Project.API.AssemblyInfo.cs
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\bin\Debug\netcoreapp2.0\Project.API.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\obj\Debug\netcoreapp2.0\Project.API.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\obj\Debug\netcoreapp2.0\Project.API.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\obj\Debug\netcoreapp2.0\Project.API.csprojAssemblyReference.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\bin\Debug\netcoreapp2.0\Project.Domain.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\bin\Debug\netcoreapp2.0\Project.Domain.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\obj\Debug\netcoreapp2.0\Project.API.csproj.CopyComplete
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\bin\Debug\netcoreapp2.0\Project.Infrastructure.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.API\bin\Debug\netcoreapp2.0\Project.Infrastructure.pdb

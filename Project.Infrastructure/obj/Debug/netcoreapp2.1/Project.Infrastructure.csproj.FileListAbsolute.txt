@@ -1,0 +1,12 @@
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\bin\Debug\netcoreapp2.1\Project.Infrastructure.deps.json
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\bin\Debug\netcoreapp2.1\Project.Infrastructure.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\obj\Debug\netcoreapp2.1\Project.Infrastructure.csproj.CoreCompileInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\obj\Debug\netcoreapp2.1\Project.Infrastructure.AssemblyInfoInputs.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\obj\Debug\netcoreapp2.1\Project.Infrastructure.AssemblyInfo.cs
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\bin\Debug\netcoreapp2.1\Project.Infrastructure.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\bin\Debug\netcoreapp2.1\Project.Domain.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\bin\Debug\netcoreapp2.1\Project.Domain.pdb
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\obj\Debug\netcoreapp2.1\Project.Infrastructure.csprojAssemblyReference.cache
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\obj\Debug\netcoreapp2.1\Project.Infrastructure.csproj.CopyComplete
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\obj\Debug\netcoreapp2.1\Project.Infrastructure.dll
+D:\HoboCY.Repository\Core.Study\project\beta\User.API\Project.Infrastructure\obj\Debug\netcoreapp2.1\Project.Infrastructure.pdb

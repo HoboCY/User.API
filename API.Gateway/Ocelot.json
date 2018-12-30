@@ -1,21 +1,39 @@
 ﻿{
   "ReRoutes": [
-    { //User.API users
+    //User.API
+    { //User.API 获取当前用户信息
       "DownstreamPathTemplate": "/api/users", //下游路径
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ //下游Host和端口
         {
           "Host": "localhost",
-          "Port": 8090
+          "Port": 63402
         }
       ],
       "UpstreamPathTemplate": "/users", //上游路径
       "UpstreamHttpMethod": [ "Get", "Patch" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "finbook",
-        "AllowedScopes": [ "gateway_api" ]
+        "AllowedScopes": [ "user_api" ]
       }
     },
+    { //User.API 获取用户基本信息
+      "DownstreamPathTemplate": "/api/users/baseUserInfo/{userId}", //下游路径
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ //下游Host和端口
+        {
+          "Host": "localhost",
+          "Port": 63402
+        }
+      ],
+      "UpstreamPathTemplate": "/users/baseUserInfo/{userId}", //上游路径
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "finbook",
+        "AllowedScopes": [ "user_api" ]
+      }
+    },
+    //User.Identity
     { //User.Identity well-known
       "DownstreamPathTemplate": "/.well-known/{catchAll}", //下游路径
       "DownstreamScheme": "http",
@@ -41,6 +59,7 @@
       "UpstreamPathTemplate": "/connect/{catchAll}", //上游路径
       "UpstreamHttpMethod": [ "Post" ]
     },
+    //Contact.API
     { //Contact.API-获取通讯录列表
       "DownstreamPathTemplate": "/api/contacts", //下游路径
       "DownstreamScheme": "http",
@@ -67,9 +86,29 @@
         }
       ],
       "UpstreamPathTemplate": "/contacts/tag", //上游路径
-      "UpstreamHttpMethod": [ "Put" ]
+      "UpstreamHttpMethod": [ "Put" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "finbook",
+        "AllowedScopes": [ "contact_api" ]
+      }
     },
-    { //Contact.API-获取好友申请列表
+    { //Contact.API-添加好友请求
+      "DownstreamPathTemplate": "/api/contacts/apply-requests/{catchAll}", //下游路径
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ //下游Host和端口
+        {
+          "Host": "localhost",
+          "Port": 29744
+        }
+      ],
+      "UpstreamPathTemplate": "/contacts/apply-requests/{catchAll}", //上游路径
+      "UpstreamHttpMethod": [ "Get", "Put", "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "finbook",
+        "AllowedScopes": [ "contact_api" ]
+      }
+    },
+    { //Contact.API-获取好友申请列表/通过好友请求
       "DownstreamPathTemplate": "/api/contacts/apply-requests", //下游路径
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ //下游Host和端口
@@ -79,7 +118,46 @@
         }
       ],
       "UpstreamPathTemplate": "/contacts/apply-requests", //上游路径
-      "UpstreamHttpMethod": [ "Get", "Put", "Post" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "finbook",
+        "AllowedScopes": [ "contact_api" ]
+      }
+    },
+
+    //Project.API
+    { //Project.API-获取项目列表
+      "DownstreamPathTemplate": "/api/project", //下游路径
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ //下游Host和端口
+        {
+          "Host": "localhost",
+          "Port": 54793
+        }
+      ],
+      "UpstreamPathTemplate": "/project", //上游路径
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "finbook",
+        "AllowedScopes": [ "project_api" ]
+      }
+    },
+    //Recommend.API
+    { //Recommend.API-获取推荐项目列表
+      "DownstreamPathTemplate": "/api/recommend", //下游路径
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ //下游Host和端口
+        {
+          "Host": "localhost",
+          "Port": 59852
+        }
+      ],
+      "UpstreamPathTemplate": "/recommend", //上游路径
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "finbook",
+        "AllowedScopes": [ "recommend_api" ]
+      }
     }
   ],
   "GlobalConfiguration": {

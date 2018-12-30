@@ -34,23 +34,24 @@ namespace Contact.API.Services
 
             _userServiceUrl = $"http://{host}:{port}";
         }
-        public async Task<BaseUserInfo> GetBaseUserInfoAsync(int userId)
+        public async Task<UserIdentity> GetBaseUserInfoAsync(int userId)
         {
             _logger.LogTrace($"Enter into GetBaseUserInfoAsync:{userId}");
-            BaseUserInfo result = null;
             try
             {
                 var response = await _httpClient.GetStringAsync($"{_userServiceUrl}/api/users/baseUserInfo/{userId}");
                 if (!string.IsNullOrWhiteSpace(response))
                 {
-                    result = JsonConvert.DeserializeObject<BaseUserInfo>(response);
+                    var result = JsonConvert.DeserializeObject<UserIdentity>(response);
+                    return result;
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(" BaseUserInfo 在重试之后失败", ex.Message + ex.StackTrace);
+                _logger.LogError(" GetBaseUserInfoAsync 在重试之后失败", ex.Message + ex.StackTrace);
+                throw ex;
             }
-            return result;
+            return null;
         }
     }
 }

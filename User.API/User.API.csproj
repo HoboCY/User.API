@@ -11,11 +11,16 @@
 
   <ItemGroup>
     <PackageReference Include="Consul" Version="0.7.2.6" />
+    <PackageReference Include="DotNetCore.CAP" Version="2.2.0" />
+    <PackageReference Include="DotNetCore.CAP.MySql" Version="2.2.0" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="2.2.0" />
     <PackageReference Include="IdentityServer4" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="2.1.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="6.10.7" />
+    <PackageReference Include="zipkin4net" Version="1.2.3" />
+    <PackageReference Include="zipkin4net.middleware.aspnetcore" Version="1.2.3" />
   </ItemGroup>
 
   <ItemGroup>

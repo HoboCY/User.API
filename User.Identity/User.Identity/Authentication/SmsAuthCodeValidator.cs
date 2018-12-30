@@ -53,7 +53,6 @@ namespace User.Identity.Authentication
                 new Claim("name",userInfo.Name??string.Empty),
                 new Claim("company",userInfo.Company??string.Empty),
                 new Claim("title",userInfo.Title??string.Empty),
-                new Claim("phone",userInfo.Phone??string.Empty),
                 new Claim("avatar",userInfo.Avatar??string.Empty)
             };
 

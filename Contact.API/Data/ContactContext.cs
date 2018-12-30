@@ -25,11 +25,8 @@ namespace Contact.API.Data
 
         private void CheckOrCreateCollection(string collectionName)
         {
-            var collectionList = _database.ListCollections().ToList();
-            var collectionNames = new List<string>();
-
-            collectionList.ForEach(b => collectionNames.Add(b["name"].AsString));
-            if (!collectionNames.Contains(collectionName))
+            var collectionNameList = _database.ListCollections().ToList().Select(l => l["name"].AsString);
+            if (!collectionNameList.Contains(collectionName))
             {
                 _database.CreateCollection(collectionName);
             }

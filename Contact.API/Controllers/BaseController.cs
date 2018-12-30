@@ -18,7 +18,6 @@ namespace Contact.API.Controllers
                 identity.UserId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "sub").Value);
                 identity.Name = User.Claims.FirstOrDefault(c => c.Type == "name").Value;
                 identity.Company = User.Claims.FirstOrDefault(c => c.Type == "company").Value;
-                identity.Phone = User.Claims.FirstOrDefault(c => c.Type == "phone").Value;
                 identity.Title = User.Claims.FirstOrDefault(c => c.Type == "title").Value;
                 identity.Avatar = User.Claims.FirstOrDefault(c => c.Type == "avatar").Value;
 
